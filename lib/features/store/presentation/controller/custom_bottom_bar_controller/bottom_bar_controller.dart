@@ -4,17 +4,15 @@ import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 import '../../../../cart/presentation/screens/cart_screen.dart';
-
+import '../../screens/favorite.dart';
 
 class BottomBarController extends GetxController {
-
   final List<Widget> _tabs = <Widget>[
-   const HomeScreen(),
+    const HomeScreen(),
     Center(child: const Text('news')),
     const SizedBox(),
-    Center(child: const Text('fav')),
+    const FavoriteScreen(),
     const CartScreen(),
-
   ];
 
   Widget get tab => _tabs[selectedMenuIndex];

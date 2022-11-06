@@ -26,6 +26,7 @@ class HomeController extends GetxController with StateMixin {
   var addresses = RxList<Address>([]);
   var categories = RxList<Categories>([]);
   var dealOfTheDay = RxList<Product>([]);
+  var favoriteList = RxList<Product>([]);
   final banner = Product(
     quantity: 0,
     categoryId: 0,
@@ -88,7 +89,18 @@ class HomeController extends GetxController with StateMixin {
 
     update();
 
-    showToast(message: item.isFavourite == true ? 'تم الاضافه' : "تم الحذف");
+    getFavouriteList();
+
+    showToast(
+        message: item.isFavourite == true
+            ? 'Added to Favorite'
+            : "Removed to Favorite");
+  }
+
+  getFavouriteList() {
+    favoriteList.value = dealOfTheDay.where((p0) => p0.isFavourite).toList();
+
+    update();
   }
 
   HomeController(this._addressUseCase, this._categoriesUseCase,

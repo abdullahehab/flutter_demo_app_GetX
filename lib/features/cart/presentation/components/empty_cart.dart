@@ -29,7 +29,7 @@ class EmptyCart extends StatelessWidget {
             /// navigate to home page
             bottomBarController.setSelectedMenuIndex = 0;
           },
-          child: const Text('لم يتم اضافه منتجات الذهاب للتسوق'),
+          child: const Text('No Item has Been added go to grocery'),
         )
       ],
     ).setCenter();
