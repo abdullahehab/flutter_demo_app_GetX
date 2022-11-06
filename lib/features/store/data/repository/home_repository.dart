@@ -22,20 +22,35 @@ class HomeRepository implements BaseHomePageRepository {
   }
 
   @override
-  Future<Either<Failure, Product>> getBanner() {
-    // TODO: implement getBanner
-    throw UnimplementedError();
+  Future<Either<Failure, Product>> getBanner() async {
+    final result = await _remoteDataSource.getBanner();
+
+    try {
+      return Right(result);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 
   @override
-  Future<Either<Failure, List<Categories>>> getCategories() {
-    // TODO: implement getCategories
-    throw UnimplementedError();
+  Future<Either<Failure, List<Categories>>> getCategories() async {
+    final result = await _remoteDataSource.getCategories();
+
+    try {
+      return Right(result);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 
   @override
-  Future<Either<Failure, List<Product>>> getDealOfTheDay() {
-    // TODO: implement getDealOfTheDay
-    throw UnimplementedError();
+  Future<Either<Failure, List<Product>>> getDealOfTheDay() async {
+    final result = await _remoteDataSource.getDealOfTheDay();
+
+    try {
+      return Right(result);
+    } catch (e) {
+      return Left(ServerFailure(e.toString()));
+    }
   }
 }

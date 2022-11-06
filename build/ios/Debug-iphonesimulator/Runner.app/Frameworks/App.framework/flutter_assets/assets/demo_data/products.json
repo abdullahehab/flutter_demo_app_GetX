@@ -1,0 +1,35 @@
+[
+  {
+    "name" : "Summer Sun Ice Cream Pack",
+    "id" : 1,
+    "category_id" : 1,
+    "available_date" : "Available until 24 December 2020",
+    "distance" : 2,
+    "is_favourite" : false,
+    "price": "100",
+    "discount_price" : "",
+    "quantity" : 5
+  },
+  {
+    "name" : "Summer",
+    "id" : 2,
+    "category_id" : 2,
+    "available_date" : "",
+    "distance" : 4,
+    "is_favourite" : false,
+    "price": "200",
+    "discount_price" : "500",
+    "quantity" : 4
+  },
+  {
+    "name" : "Sun",
+    "id" : 3,
+    "category_id" : 3,
+    "available_date" : "",
+    "distance" : 6,
+    "is_favourite" : false,
+    "price": "200",
+    "discount_price" : "500",
+    "quantity" : 4
+  }
+]

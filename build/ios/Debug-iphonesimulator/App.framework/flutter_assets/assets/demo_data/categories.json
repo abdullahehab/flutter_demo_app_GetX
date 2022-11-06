@@ -1,0 +1,22 @@
+[
+  {
+    "id" : 1,
+    "name" : "Steak",
+    "color" : "0xffF9BDAD"
+  },
+  {
+    "id" : 2,
+    "name" : "Vegetables",
+    "color" : "0xffFAD96D"
+  },
+  {
+    "id" : 3,
+    "name" : "Beverages",
+    "color" : "0xffCCB8FF"
+  },
+  {
+    "id" : 4,
+    "name" : "Fish",
+    "color" : "0xffB0EAFD"
+  }
+]
